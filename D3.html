@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive UK Map with D3.js</title>
+    <link rel="stylesheet" href="./D3.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+<div id="title">MAP OF THE UK</div>
+<div id="map">
+    <a href="https://www.maptiler.com"><img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
+</div>
+<div class="controls">
+    <div class="town-control">
+        <label for="townCount">Number of towns:</label>
+        <input type="range" id="townCount" name="townCount" min="10" max="500" value="50" oninput="updateTownCount(this.value)">
+        <span id="townCountLabel">50</span>
+    </div>
+    <div class="reload-control">
+        <button onclick="reloadData()">Reload Data</button>
+    </div>
+</div>
+<script src="./D3.js"></script>
+</body>
+</html>
